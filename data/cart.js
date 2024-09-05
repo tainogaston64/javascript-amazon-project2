@@ -53,6 +53,7 @@ export function removeFromCart(productId) {
 
   saveToStorage();
 }
+//15i.
 
 export function calculateCartQuantity() {
   let cartQuantity = 0;
