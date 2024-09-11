@@ -112,8 +112,7 @@ import {renderCheckoutHeader} from './checkoutHeader.js';
     return html;
   }
 
-  document.querySelector('.js-order-summary')
-  .innerHTML = cartSummaryHTML;
+  document.querySelector('.js-order-summary').innerHTML = cartSummaryHTML;
 
   document.querySelectorAll('.js-delete-link')
   .forEach((link) => {
