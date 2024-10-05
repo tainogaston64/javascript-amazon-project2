@@ -1,5 +1,6 @@
 import {addToCart, cart, loadFromStorage, removeFromCart} from '../../data/cart.js';
 
+
 describe('test suite: addToCart', () => {
   beforeEach(() => {
     //16e.
