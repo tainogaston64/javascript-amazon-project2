@@ -4,6 +4,7 @@ import {renderPaymentSummary} from './checkout/paymentSummary.js';
 // to import all the data in a file
 //import '../data/cart-class.js';
 import '../data/car.js';
+import '../data/backend-practice.js';
 
 renderCheckoutHeader();
 
