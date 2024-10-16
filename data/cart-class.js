@@ -28,7 +28,7 @@ export class Cart {
     localStorage.setItem(this.#localStorageKey, JSON.stringify(this.cartItems));
   }
 
-  addToCart(productId) {
+   addToCart(productId) {
     let matchingItem;
   
     this.cartItems.forEach((cartItem) => {

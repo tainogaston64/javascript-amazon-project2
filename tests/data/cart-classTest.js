@@ -1,5 +1,4 @@
-import {addToCart, Cart, loadFromStorage, removeFromCart} from '../../data/cart-class.js';
-
+import {Cart,loadFromStorage} from '../../data/cart-class.js';
 
 describe('test suite: addToCart', () => {
   beforeEach(() => {
@@ -14,7 +13,7 @@ describe('test suite: addToCart', () => {
         deliveryOptionId: '1'
       }]);
     });
-loadFromStorage();
+  loadFromStorage();
 
   addToCart('e43638ce-6aa0-4b85-b27f-e1d07eb678c6');
   expect(cart.length).toEqual(1);
@@ -33,7 +32,7 @@ loadFromStorage();
     spyOn(localStorage, 'getItem').and.callFake(() => {
       return JSON.stringify([]);
     });
-loadFromStorage();
+  loadFromStorage();
 
     addToCart('e43638ce-6aa0-4b85-b27f-e1d07eb678c6');
     expect(cart.length).toEqual(1);
