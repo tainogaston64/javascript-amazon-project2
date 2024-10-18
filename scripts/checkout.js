@@ -8,22 +8,45 @@ import {loadCart} from '../data/cart.js'
 import '../data/car.js';
 // import '../data/backend-practice.js';
 
+// Async await is a shortcut for promises; it makes a function return a promise
+ async function loadPage() {
+   //await lets us wait for a promise to finish, before going to the next line.
+  //await lets us write asynchronous code like normal code.
+  // loadProductsFetch().then(() => {
+
+  // })
+  //using await we can only use it when were inside an async function
+  await loadProductsFetch();
+
+  const value = await new Promise((resolve) => {
+        loadCart(() => {
+          // when the value in resolve is returned we can save this value in a variable instead of using .then
+          resolve('value3'); 
+        });
+      });
+
+      renderCheckoutHeader();
+      renderOrderSummary();
+      renderPaymentSummary();
+} 
+loadPage();
+
 //Promise.all(): runs multiple promises at the same time
 //and waits for all to finish
-Promise .all([
-  loadProductsFetch(),
-  new Promise((resolve) => {
-    loadCart(() => {
-      resolve('value2'); 
-    });
-  })
+// Promise .all([
+//   loadProductsFetch(),
+//   new Promise((resolve) => {
+//     loadCart(() => {
+//       resolve('value2'); 
+//     });
+//   })
 
-]).then((values) => {
-  console.log(values);
-    renderCheckoutHeader();
-    renderOrderSummary();
-    renderPaymentSummary();
-});
+// ]).then((values) => {
+//   console.log(values);
+//     renderCheckoutHeader();
+//     renderOrderSummary();
+//     renderPaymentSummary();
+// });
 
 // new Promise((resolve) => {
 //   loadProducts(() => {
