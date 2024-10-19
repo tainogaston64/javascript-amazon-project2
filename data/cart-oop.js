@@ -95,19 +95,28 @@ function Cart(localStorageKey) {
      this.saveToStorage();
    }
  };
+
  return cart;
-}
+};
 
 const cart = Cart('cart-oop');
 const businessCart = Cart('cart-business');
-
-
   
 cart.loadFromStorage();
+// cart.addToCart('83d4ca15-0f35-48f5-b7a3-1ea210004f2e');
 
 
- 
+// return cart;
+
+
+// const cart = Cart('cart-oop');
+// const businessCart = Cart('cart-business');
+
 businessCart.loadFromStorage();
+
+// cart.addToCart('83d4ca15-0f35-48f5-b7a3-1ea210004f2e')
+ 
+// businessCart.loadFromStorage();
 
 console.log(cart);
 console.log(businessCart);
