@@ -11,20 +11,31 @@ import '../data/cart-class.js';
 
 // Async await is a shortcut for promises; it makes a function return a promise
  async function loadPage() {
+  // this method (try/catch ) is used for async functions. We can use ths method with synchronous code (normal code).
+  // Now, to manually create an error we use : 
+  try {
+    // throw 'error1';
+     //using await we can only use it when were inside an async function
+  await loadProductsFetch();
+
+  const value = await new Promise((resolve, reject) => {
+    // manual error
+    // throw 'error2';
+    loadCart(() => {
+      // reject('error3');
+      // when the value in resolve is returned we can save this value in a variable instead of using .then
+      resolve('value3'); 
+    });
+  });
+
+  } catch (error) {
+    console.log('Unexpected error . Please try again later');
+  }
    //await lets us wait for a promise to finish, before going to the next line.
   //await lets us write asynchronous code like normal code.
   // loadProductsFetch().then(() => {
 
   // })
-  //using await we can only use it when were inside an async function
-  await loadProductsFetch();
-
-  const value = await new Promise((resolve) => {
-        loadCart(() => {
-          // when the value in resolve is returned we can save this value in a variable instead of using .then
-          resolve('value3'); 
-        });
-      });
 
       renderCheckoutHeader();
       renderOrderSummary();
