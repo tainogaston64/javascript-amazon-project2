@@ -6,7 +6,7 @@ import {loadCart} from '../data/cart.js'
 // to import all the data in a file
 //import '../data/cart-class.js';
 import '../data/car.js';
-import '../data/cart-oop.js';
+import '../data/cart-class.js';
 // import '../data/backend-practice.js';
 
 // Async await is a shortcut for promises; it makes a function return a promise
