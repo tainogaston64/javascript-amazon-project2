@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lesson 18</title>
+</head>
+<body>
+    <script>
+      //18a.  
+        
+      //      const  xhr = new XMLHttpRequest();
+          
+       //   xhr.addEventListener('load', () => {
+       //     console.log(xhr.response);
+       //       });
+                        
+       //     xhr.open('GET', 'https://supersimplebackend.dev/greeting');
+        //    xhr.send();
+
+      //18b.
+     /*fetch(
+    'https://supersimplebackend.dev/greeting'
+  ).then((response) => {
+    return response.text()
+  }).then((text) => {
+    
+    console.log(text);
+    });
+
+    //18c.
+    // Async await is a shortcut for promises; it makes a function return a promise
+ async function getGreeting() {  
+  
+    const response = await fetch('https://supersimplebackend.dev/greeting')
+     //await lets us wait for a promise to finish, before going to the next line.
+    //await lets us write asynchronous code like normal code.
+    const text = await response.text(); 
+    console.log(text);       
+  } 
+
+  getGreeting();*/
+
+  //18d.
+    // Async await is a shortcut for promises; it makes a function return a promise
+ async function getGreeting() {  
+  
+    const response = await fetch('https://supersimplebackend.dev/greeting', {
+        method:'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            name: 'Taino'
+        })
+    });
+    const text = await response.text(); 
+    console.log(text);       
+  } 
+
+  getGreeting();
+
+  //18e.
+      const  xhr = new XMLHttpRequest();
+          
+         xhr.addEventListener('load', () => {
+           console.log(xhr.response);
+        });
+
+        xhr.addEventListener('error', (error) => {
+        console.log("'http://127.0.0.1:5501' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.");
+        });
+                        
+           xhr.open('GET', 'https://amazon.com');
+        xhr.send();
+
+          
+    </script>
+    
+</body>
+</html>

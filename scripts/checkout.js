@@ -2,7 +2,8 @@ import {renderCheckoutHeader} from './checkout/checkoutHeader.js';
 import {renderOrderSummary} from './checkout/orderSummary.js';
 import {renderPaymentSummary} from './checkout/paymentSummary.js';
 import {loadProducts, loadProductsFetch} from '../data/products.js';
-import {loadCart} from '../data/cart.js'
+import {loadCart} from '../data/cart.js';
+import  '../data/cart-oop.js'
 // to import all the data in a file
 //import '../data/cart-class.js';
 import '../data/car.js';
