@@ -103,14 +103,14 @@ export class Cart {
   }
 }
 
-export const cart = new Cart();
-const businessCart = new Cart();
+export const cart = new Cart('cart-oop');
+const businessCart = new Cart('cart-business');
 
-cart.localStorageKey = 'cart-oop';
-businessCart.localStorageKey = 'cart-business';
+// cart.localStorageKey = 'cart-oop';
+// businessCart.localStorageKey = 'cart-business';
 
-cart.loadFromStorage();
-businessCart.loadFromStorage();
+// cart.loadFromStorage();
+// businessCart.loadFromStorage();
 
 console.log(cart);
 console.log(businessCart);
