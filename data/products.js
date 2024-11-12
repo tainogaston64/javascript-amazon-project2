@@ -28,17 +28,20 @@ export class Product {
   }
 
   getStarsUrl() {
-    return `images/ratings/rating-${this.rating.stars * 10}.png`
+    return `images/ratings/rating-${this.rating.stars * 10}.png`;
   }
 
   getPrice() {
-    return `$${formatCurrency(this.priceCents)}`
+    return `$${formatCurrency(this.priceCents)}`;
   }
 
   extraInfoHTML() {
     return '';
   }
 }
+
+// const product1 = new Product();
+// console.log(product1);
 
 export class Clothing extends Product {
   sizeChartLink;
