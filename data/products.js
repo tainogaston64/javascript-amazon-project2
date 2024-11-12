@@ -44,9 +44,11 @@ export class Product {
 // console.log(product1);
 
 export class Clothing extends Product {
+  //Get all the properties of Product
   sizeChartLink;
 
   constructor(productDetails) {
+    //Get the constructor of Product
     super(productDetails);
     this.sizeChartLink = productDetails.sizeChartLink;
   }
@@ -75,7 +77,7 @@ export class Appliance extends Product {
       <a href="${this.instructionsLink}" target="_blank">
       Instructions
       </a>
-      <a href="${this.warrantyLink} target="_blank">
+      <a href="${this.warrantyLink}" target="_blank">
       Warranty
       </a>
     `;
@@ -98,8 +100,10 @@ export class Appliance extends Product {
 //   type: "clothing",
 //   sizeChartLink: "images/clothing-size-chart.png"
 // });
+// console.log(tshirt);
+// console.log(tshirt.getPrice());
 
-// Challenge Exercises
+// // Challenge Exercises
 
 // const toaster = new Appliance({
 //   id: "54e0eccd-8f36-462b-b68a-8182611d9add",
@@ -119,7 +123,7 @@ export class Appliance extends Product {
 //   instructionsLink: "images/appliance-instructions.png",
 //   warrantyLink: "images/appliance-warranty.png"
 // });
-
+// console.log(toaster);
 
 //  console.log(toaster);
 // console.log(tshirt.getPrice());
