@@ -56,8 +56,8 @@ const car2 = new Car({
   model: 'Model 3'
 });
 
-// console.log(car1);
-// console.log(car2);
+console.log(car1);
+console.log(car2);
 
 
 
@@ -97,7 +97,7 @@ const raceCar = new RaceCar({
   acceleration: 20
 });
 
-// car1.displayInfo();
+car1.displayInfo();
 // car1.go();
 // car1.go();
 // car1.go();
@@ -105,7 +105,7 @@ const raceCar = new RaceCar({
 // car1.displayInfo();
 // car1.openTrunk();
 // car1.displayInfo();
-// car2.displayInfo();
+car2.displayInfo();
 // car2.go();
 // car2.brake();
 // car2.brake();
