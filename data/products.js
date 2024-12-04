@@ -105,28 +105,27 @@ export class Appliance extends Product {
 
 // // Challenge Exercises
 
-// const toaster = new Appliance({
-//   id: "54e0eccd-8f36-462b-b68a-8182611d9add",
-//     image: "images/products/black-2-slot-toaster.jpg",
-//     name: "2 Slot Toaster - Black",
-//     rating: {
-//       stars: 5,
-//       count: 2197
-//     },
-//     priceCents: 1899,
-//     keywords: [
-//       "toaster",
-//       "kitchen",
-//       "appliances"
-//     ],
-//   type: "appliance",
-//   instructionsLink: "images/appliance-instructions.png",
-//   warrantyLink: "images/appliance-warranty.png"
-// });
-// console.log(toaster);
+const toaster = new Appliance({
+  id: "54e0eccd-8f36-462b-b68a-8182611d9add",
+    image: "images/products/black-2-slot-toaster.jpg",
+    name: "2 Slot Toaster - Black",
+    rating: {
+      stars: 5,
+      count: 2197
+    },
+    priceCents: 1899,
+    keywords: [
+      "toaster",
+      "kitchen",
+      "appliances"
+    ],
+  type: "appliance",
+  instructionsLink: "images/appliance-instructions.png",
+  warrantyLink: "images/appliance-warranty.png"
+});
 
-//  console.log(toaster);
-// console.log(tshirt.getPrice());
+ console.log(toaster);
+console.log(toaster.getPrice());
 
 // const date =  new Date();
 // console.log(date);
