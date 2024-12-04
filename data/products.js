@@ -138,12 +138,7 @@ console.log(toaster.getPrice());
 //   b: this.a
 // }
 
-// function logThis() {
-//     console.log(this);
-// }
-
-// logThis();
-// logThis.call('hello');
+       
 
 // const object3 = {
 //   method() {
