@@ -24,3 +24,4 @@ xhr.addEventListener('load', () => {
 
  // URL Path: it comes after the domain name
  // Ex: https://supersimplebackend.dev(/products/first)=> this is the URL path
+ // API = APPLICATION PROGRAMMING INTERFACE
