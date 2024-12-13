@@ -193,7 +193,7 @@ xhr.addEventListener('load', () => {
      return  new Product(productDetails);
     });
 
-    console.log('load products');
+    // console.log('load products');
 
     fun();
 });
@@ -205,6 +205,7 @@ xhr.addEventListener('error', (error) => {
   xhr.open('GET', 'https://supersimplebackend.dev/products');
   xhr.send();
 }
+// loadProducts();
 
 // export const products = [
 //   {
